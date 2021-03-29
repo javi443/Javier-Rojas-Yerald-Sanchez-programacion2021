@@ -45,7 +45,7 @@ public class PnlListVehicleController {
 //        {
 //            logger.severe("Ocurrio un error ".concat(e.toString()) );
 //        }
-        JsonReader jreader = new JsonReader(new BufferedReader(
+        JsonReader jreader = new JsonReader (new BufferedReader(
                 new InputStreamReader(getClass().getResourceAsStream("/jsons/vehicleData.json"))
         ));
         
