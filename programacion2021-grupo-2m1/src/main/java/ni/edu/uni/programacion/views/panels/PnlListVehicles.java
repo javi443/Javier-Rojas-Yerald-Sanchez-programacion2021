@@ -235,8 +235,8 @@ vehicleSubModels = cont.listartodos();
             this.jTable1.setModel(tabla);
  
         } catch (Exception e) {
-            logger.severe("Ocurrio una exepcion".concat(e.toString()));
-            throw new RuntimeException(e);
+           logger.severe("Sucedio una exepcion".concat(e.toString()));
+           throw new RuntimeException (e);
         }
     }
     
