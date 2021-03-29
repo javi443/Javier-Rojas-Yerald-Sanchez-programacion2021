@@ -45,7 +45,7 @@ public class PnlListVehicleController {
 //        {
 //            logger.severe("Ocurrio un error ".concat(e.toString()) );
 //        }
-        JsonReader jreader = new JsonReader (new BufferedReader(
+        JsonReader jreader = new JsonReader (new BufferedReader( 
                 new InputStreamReader(getClass().getResourceAsStream("/jsons/vehicleData.json"))
         ));
         
@@ -77,7 +77,7 @@ public class PnlListVehicleController {
             String registro = i.getColor().concat(i.getMake()).concat(i.getModel()).concat(i.getYear());
             logger.info("Viendo el registro: ".concat(registro));
             
-            if (registro.contains(filtro))
+           
             {
                 logger.info("Hizo match".concat(registro));
                 listafiltrada.add(i);
