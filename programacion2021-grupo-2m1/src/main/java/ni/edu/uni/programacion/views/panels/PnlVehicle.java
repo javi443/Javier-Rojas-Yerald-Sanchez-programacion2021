@@ -448,10 +448,10 @@ public class PnlVehicle extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtStockFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtStockFocusLost
-        if(txtStock.getText().isEmpty()){
-            txtStock.requestFocus();
-            txtStock.setBorder(new LineBorder(Color.RED, 1));
-            return;
+     if (txtStock.getText().isEmpty()){
+         txtStock.requestFocus();
+         txtStock.setBorder(new LineBorder(Color.RED, 1));
+         return;
         }
         
         txtStock.setBorder(null);
