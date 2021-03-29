@@ -44,7 +44,7 @@ public class PnlListVehicles extends javax.swing.JPanel {
         }
         catch (Exception e) 
         {
-            logger.severe("Ocurrio un error".concat(e.toString()));
+            logger.severe("Sucedio un error".concat(e.toString()));
         }
     }
 
@@ -76,6 +76,8 @@ public class PnlListVehicles extends javax.swing.JPanel {
             }
         ));
         jScrollPane1.setViewportView(jTable1);
+
+        jTextField1.setText("color");
 
         jLabel1.setText("Digite el texto a buscar:");
 
@@ -140,7 +142,7 @@ public class PnlListVehicles extends javax.swing.JPanel {
         }
         catch (Exception e)
         {
-            logger.severe("Ocurrio una exception".concat(e.toString()));
+            logger.severe("Sucedio una exception".concat(e.toString()));
             JOptionPane.showMessageDialog(jButton1, e.toString());
         }
         
@@ -205,16 +207,17 @@ vehicleSubModels = cont.listartodos();
 //            Type listType = new TypeToken<ArrayList<VehicleSubModel>>() {
 //            }.getType();
 //            vehicleSubModels = gson.fromJson(jreader, listType);
-PnlListVehicleController cont = new PnlListVehicleController();
-vehicleSubModels = cont.ListaFiltrada(filtro);
-logger.info("Se encontraron ".concat(Integer.toString(vehicleSubModels.size())));
-            
+ PnlListVehicleController cont = new PnlListVehicleController();
+ vehicleSubModels = cont.ListaFiltrada(filtro);
+ logger.info("Se encontraron".concat(Integer.toString(vehicleSubModels.size())));
             
             //[{"make":"Pontiac","model":"Grand Am","year":1986,"color":"Fuscia"},
-            String[] Columnas={"Make", "Model", "Year", "Color"};
-            DefaultTableModel tabla = new DefaultTableModel();
+            String[] Columnas = {"Make", "Model", "Year", "Color"};
+            DefaultTableModel tabla = new DefaultTableModel ();
             for (String i : Columnas)
                 tabla.addColumn(i);
+            
+            
             
             
                         
